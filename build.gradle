@@ -66,6 +66,6 @@ tasks.withType(Test) {
 }
     task mobymed(type: Test) {
         useJUnitPlatform {
-            includeTags "mobymed"
+            includeTags 'mobymed'
         }
     }
