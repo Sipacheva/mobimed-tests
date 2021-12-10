@@ -3,6 +3,7 @@ package ru.mobimed.tests;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Wait;
@@ -20,6 +21,7 @@ public class VisitTests extends TestBase {
   @Test
   @Description("Запись на прием")
   @DisplayName("Make a visit")
+  @Tag("mobymed")
   void AddVisitTest() {
     step("Нажать 'Запись на приём', подождать, пока загрузится страница", () -> {
       $(byText("Запись на приём")).click();
