@@ -1,4 +1,4 @@
-package ru.mobimed.config.demowebshop;
+package ru.mobimed.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
