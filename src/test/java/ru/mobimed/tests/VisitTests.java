@@ -5,24 +5,19 @@ import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Wait;
 
 import static com.codeborne.selenide.CollectionCondition.itemWithText;
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.files.DownloadActions.click;
 import static io.qameta.allure.Allure.step;
 
 public class VisitTests extends TestBase {
   @Test
   @Description("Запись на прием")
   @DisplayName("Make a visit")
-  @Tag("mobymed")
-  void AddVisitTest() {
+  @Tag("mobimed")
+  void AddAndDeleteVisitTest() {
     step("Нажать 'Запись на приём', подождать, пока загрузится страница", () -> {
       $(byText("Запись на приём")).click();
       //$("[aria-label=\"onLine\"]").click();
@@ -46,6 +41,7 @@ public class VisitTests extends TestBase {
 
     step("Записаться на приём и закрыть сообщение", () -> {
       $(byText("Записаться на приём")).click();
+      sleep(3000);
       $("div.MuiAlert-message", 1).shouldHave(text("Вы записаны на приём"));
       $(byText("Закрыть"), 1).click();
     });
@@ -54,6 +50,7 @@ public class VisitTests extends TestBase {
       $(byText("Cобытия")).click();
       $$(".MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-2")
               .findBy(text("30")).sibling(3).$(byText("Отменить")).click();
+      sleep(3000);
       $(".MuiDialogActions-root.MuiDialogActions-spacing", 1)
               .$(byText("Да")).click();
       $(byText("Закрыть"), 2).click();
@@ -62,5 +59,7 @@ public class VisitTests extends TestBase {
     step("Проверить, что есть текст Отменённый визит", () -> {
       $$("h6").shouldHave(itemWithText("Отмененный визит"));
     });
+
+    //TODO: разобраться со sleep
   }
 }

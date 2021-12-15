@@ -46,7 +46,7 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
- /*   if (System.getProperty("threads") != null) {
+    if (System.getProperty("threads") != null) {
         systemProperties += [
                 'junit.jupiter.execution.parallel.enabled'                 : true,
                 'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
@@ -54,7 +54,7 @@ tasks.withType(Test) {
                 'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
         ]
-    }*/
+    }
 
     testLogging {
         lifecycle {
@@ -66,6 +66,6 @@ tasks.withType(Test) {
 }
     task mobymed(type: Test) {
         useJUnitPlatform {
-            includeTags 'mobymed'
+            includeTags 'mobimed'
         }
     }

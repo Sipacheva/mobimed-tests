@@ -1,5 +1,6 @@
 package ru.mobimed.tests;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Keys;
 import ru.mobimed.config.App;
 import ru.mobimed.config.Project;
@@ -29,8 +30,8 @@ public class TestBase {
         DriverSettings.configure();
     }
 
-    @BeforeAll
-    static void loginTest() {
+    @BeforeEach
+    void loginTest() {
         step("Открыть страницу 'https://dev.mobimed.ru/'", () -> {
             open("https://dev.mobimed.ru/");
         });

@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 /*
     Selenide commands examples
@@ -200,5 +201,12 @@ public class SelenideSnippets {
         executeJavaScript("alert('selenide')");
         executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
         long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
+    }
+
+    //allure steps
+    void Test() {
+    step("name",() -> {
+        //some code
+    });
     }
 }
