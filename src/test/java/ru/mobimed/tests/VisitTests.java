@@ -23,7 +23,7 @@ public class VisitTests extends TestBase {
   void AddAndDeleteVisitTest() {
     step("Нажать 'Запись на приём', подождать, пока загрузится страница", () -> {
       $(byText("Запись на приём")).click();
-      $(".MuiCard-root").shouldBe(visible, Duration.ofSeconds(5));
+      $(".MuiCard-root").shouldBe(visible, Duration.ofSeconds(10));
     });
 
     step("Ввести фамилию в поле Специальность или ФИО", () -> {

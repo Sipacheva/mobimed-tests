@@ -55,15 +55,11 @@ public class TestBase {
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();
 
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-//        AllureAttachments.attachNetwork(); // todo
-        AllureAttachments.addBrowserConsoleLogs();
+        AllureAttachments.screenshotAs("Last screenshot");
+        AllureAttachments.pageSource();
+        AllureAttachments.browserConsoleLogs();
+        AllureAttachments.addVideo();
 
         Selenide.closeWebDriver();
-
-        if (Project.isVideoOn()) {
-            AllureAttachments.addVideo(sessionId);
-        }
     }
 }

@@ -29,7 +29,7 @@ public class InvoicesTests extends TestBase{
 
     step("Проверить наличие счета 979",() -> {
       $$(".MuiTypography-h6").findBy(text("979"))
-              .shouldBe(visible, Duration.ofSeconds(3));
+              .shouldBe(visible, Duration.ofSeconds(10));
     });
   }
 }

@@ -19,6 +19,6 @@ public class MapTests extends TestBase{
   @Tag("mobimed")
   void openMapTest() {
     $$(".MuiTab-wrapper").findBy(text("На карте")).click();
-    $("[aria-label=\"Map\"]").shouldBe(visible, Duration.ofSeconds(3));
+    $("[aria-label=\"Map\"]").shouldBe(visible, Duration.ofSeconds(10));
   }
 }
