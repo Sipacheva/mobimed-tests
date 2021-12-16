@@ -6,8 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.CollectionCondition.itemWithText;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -20,14 +23,13 @@ public class VisitTests extends TestBase {
   void AddAndDeleteVisitTest() {
     step("Нажать 'Запись на приём', подождать, пока загрузится страница", () -> {
       $(byText("Запись на приём")).click();
-      //$("[aria-label=\"onLine\"]").click();
-      $("div.MuiAvatar-root").shouldBe(Condition.visible);
-      sleep(3000);
+      $(".MuiCard-root").shouldBe(visible, Duration.ofSeconds(5));
     });
 
     step("Ввести фамилию в поле Специальность или ФИО", () -> {
       $("input[type=text]", 0).click();
       $("input[type=text]", 0).setValue("иванов").pressEnter();
+      $(".MuiCard-root", 0).shouldHave(text("Иванов Петр Сидорович"), Duration.ofSeconds(3));
     });
 
     step("Выбрать дату приёма", () -> {
@@ -41,16 +43,15 @@ public class VisitTests extends TestBase {
 
     step("Записаться на приём и закрыть сообщение", () -> {
       $(byText("Записаться на приём")).click();
-      sleep(3000);
-      $("div.MuiAlert-message", 1).shouldHave(text("Вы записаны на приём"));
+      $("div.MuiAlert-message", 1).shouldHave(text("Вы записаны на приём"), Duration.ofSeconds(5));
       $(byText("Закрыть"), 1).click();
     });
 
     step("Перейти в события и удалить запись", () -> {
-      $(byText("Cобытия")).click();
+      $$(".MuiTab-wrapper").findBy(text("Cобытия")).click();
       $$(".MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-2")
               .findBy(text("30")).sibling(3).$(byText("Отменить")).click();
-      sleep(3000);
+      $(".MuiDialogActions-root.MuiDialogActions-spacing", 1).shouldBe(visible, Duration.ofSeconds(3));
       $(".MuiDialogActions-root.MuiDialogActions-spacing", 1)
               .$(byText("Да")).click();
       $(byText("Закрыть"), 2).click();
@@ -59,7 +60,5 @@ public class VisitTests extends TestBase {
     step("Проверить, что есть текст Отменённый визит", () -> {
       $$("h6").shouldHave(itemWithText("Отмененный визит"));
     });
-
-    //TODO: разобраться со sleep
   }
 }
