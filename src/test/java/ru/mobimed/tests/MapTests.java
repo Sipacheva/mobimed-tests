@@ -16,7 +16,7 @@ import static io.qameta.allure.Allure.step;
 public class MapTests extends TestBase{
   @Test
   @Description("Проверка отображения карты")
-  @DisplayName("Check map")
+  @DisplayName("Проверка отображения карты")
   @Tag("mobimed")
   void openMapTest() {
     step("Перейти на вкладку 'На карте'",() -> {

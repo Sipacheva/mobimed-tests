@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class ChangeLanguageTests extends TestBase {
   @Test
   @Description("Изменить язык на английский")
-  @DisplayName("Change language to English")
+  @DisplayName("Изменить язык на английский")
   @Tag("mobimed")
   void changeLanguageToEnglishTest() {
     step("Выбрать английский язык", () -> {
@@ -27,7 +27,7 @@ public class ChangeLanguageTests extends TestBase {
 
   @Test
   @Description("Изменить язык на русский")
-  @DisplayName("Change language to Russian")
+  @DisplayName("Изменить язык на русский")
   @Tag("mobimed")
   void changeLanguageToRussianTest() {
     step("Выбрать русский язык", () -> {
@@ -42,7 +42,7 @@ public class ChangeLanguageTests extends TestBase {
 
   @Test
   @Description("Изменить язык на французский")
-  @DisplayName("Change language to French")
+  @DisplayName("Изменить язык на французский")
   @Tag("mobimed")
   void changeLanguageToFrenchTest() {
     step("Выбрать французский язык", () -> {

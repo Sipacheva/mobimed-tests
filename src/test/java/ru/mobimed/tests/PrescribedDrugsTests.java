@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class PrescribedDrugsTests extends TestBase{
   @Test
   @Description("Проверка наличия анальгина в прошедших назначениях")
-  @DisplayName("Check PastPrescribedDrugs")
+  @DisplayName("Проверка наличия анальгина в прошедших назначениях")
   @Tag("mobimed")
   void checkPastPrescribedDrugs() {
     step("Перейти на страницу 'Назначения'",() -> {

@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTests extends TestBase{
   @Test
   @Description("Проверка работы поиска на главной странице")
-  @DisplayName("Check search on the ")
+  @DisplayName("Проверка работы поиска на главной странице")
   @Tag("mobimed")
   void searchOnTheMainPageTest() {
     step("На Главной в строке поиска ввести 'ЛО'",() -> {

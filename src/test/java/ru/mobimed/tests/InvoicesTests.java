@@ -16,7 +16,7 @@ import static io.qameta.allure.Allure.step;
 public class InvoicesTests extends TestBase{
   @Test
   @Description("Проверка наличия оплаченного счета")
-  @DisplayName("Check Paid Invoice")
+  @DisplayName("Проверка наличия оплаченного счета")
   @Tag("mobimed")
   void CheckPaidInvoiceTest() {
     step("Перейти на вкладку Счета",() -> {

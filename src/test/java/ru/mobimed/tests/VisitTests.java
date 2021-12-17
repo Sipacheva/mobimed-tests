@@ -1,6 +1,5 @@
 package ru.mobimed.tests;
 
-import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,13 +11,14 @@ import static com.codeborne.selenide.CollectionCondition.itemWithText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
 public class VisitTests extends TestBase {
   @Test
-  @Description("Запись на прием")
-  @DisplayName("Make a visit")
+  @Description("Запись на прием и удаление записи")
+  @DisplayName("Запись на прием и удаление записи")
   @Tag("mobimed")
   void AddAndDeleteVisitTest() {
     step("Нажать 'Запись на приём', подождать, пока загрузится страница", () -> {
@@ -43,7 +43,7 @@ public class VisitTests extends TestBase {
 
     step("Записаться на приём и закрыть сообщение", () -> {
       $(byText("Записаться на приём")).click();
-      $("div.MuiAlert-message", 1).shouldHave(text("Вы записаны на приём"), Duration.ofSeconds(5));
+      $("div.MuiAlert-message", 1).shouldHave(text("Вы записаны на приём"), Duration.ofSeconds(10));
       $(byText("Закрыть"), 1).click();
     });
 

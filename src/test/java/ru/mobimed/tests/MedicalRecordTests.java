@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class MedicalRecordTests extends TestBase{
   @Test
   @Description("Проверка наличия записи в медкарте")
-  @DisplayName("Check consultation")
+  @DisplayName("Проверка наличия записи в медкарте")
   @Tag("mobimed")
   void checkConsultationTest() {
     step("Перейти на страницу 'Медкарта'",() -> {
