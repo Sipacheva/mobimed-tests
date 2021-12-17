@@ -15,6 +15,7 @@
 
 :heavy_check_mark: Проверка наличия прошедших назначений
 
+
 ## Стек технологий:
 ![Intelij_IDEA](https://user-images.githubusercontent.com/17838471/146488140-9913750f-e6a0-4298-bf05-815cb16bca72.png)
 ![Java](https://user-images.githubusercontent.com/17838471/146488154-8c60ad32-5ecc-453a-9d64-b14a2e258ffb.png)
@@ -27,6 +28,7 @@
 ![Jira](https://user-images.githubusercontent.com/17838471/146488206-32acf0dc-e859-4e0f-8498-ac3b38094f1c.png)
 ![Selenide](https://user-images.githubusercontent.com/17838471/146488211-dfd6298d-6507-4d48-bbb5-2335d8696736.png)
 ![Gradle](https://user-images.githubusercontent.com/17838471/146488213-c8eb7bc2-0c06-4f1d-8554-ec6d7b625f2a.png)
+
 
 ## Как запустить
 
@@ -77,7 +79,7 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ![TestOpsCases](https://user-images.githubusercontent.com/17838471/146493071-e9a5d8ab-9d56-4321-bccd-874a09697afe.png)
 
 
-## При прохождении автотеста записывается видео. Пример видео:
+## При прохождении автотеста записывается видео
 ![AddDeleteVisitTest](https://user-images.githubusercontent.com/17838471/146495596-d4cf4447-9f8d-48b9-820e-7ad7b72450d5.gif)
 
 
