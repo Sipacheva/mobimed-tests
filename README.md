@@ -62,11 +62,13 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ### Есть возможность посмотреть статистику запусков
 ![JenkinsHistory](https://user-images.githubusercontent.com/17838471/146491309-f82a1f5f-3a43-470d-89c4-3137682f3130.png)
 
+
 ## Отчет о прохождении автотестов формируется в AllureReport
 ![Allure](https://user-images.githubusercontent.com/17838471/146491527-f033940a-1a27-4487-aee1-c4a0dd87ab72.png)
 
 ### В AllureReport можно посмотреть шаги выполнения тестов, а также провести диагностику ошибок для тестов, которые не выполнены
 ![AllureError](https://user-images.githubusercontent.com/17838471/146491847-f1a712be-2d2d-4b2c-a8be-09090b069ea7.png)
+
 
 ## Отчет о прохождении автотестов также можно увидеть в AllureTestOps
 ![TestOps](https://user-images.githubusercontent.com/17838471/146492277-2d6863a3-39ac-41f7-97ca-fc9cffb72246.png)
@@ -74,8 +76,10 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ### В AllureTestOps хранится тестовая документация: автоматизированные и ручные сценарии
 ![TestOpsCases](https://user-images.githubusercontent.com/17838471/146493071-e9a5d8ab-9d56-4321-bccd-874a09697afe.png)
 
+
 ## При прохождении автотеста записывается видео. Пример видео:
 ![AddDeleteVisitTest](https://user-images.githubusercontent.com/17838471/146495596-d4cf4447-9f8d-48b9-820e-7ad7b72450d5.gif)
+
 
 ## Уведомления о результатах прогона автотестов приходят в Telegram-канал
 ![TelegramNotifications](https://user-images.githubusercontent.com/17838471/146496370-c31c57a5-8015-4c24-81fa-4bdef0198d37.png)
