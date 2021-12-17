@@ -78,6 +78,7 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ![AddDeleteVisitTest](https://user-images.githubusercontent.com/17838471/146495596-d4cf4447-9f8d-48b9-820e-7ad7b72450d5.gif)
 
 ## Уведомления о результатах прогона автотестов приходят в Telegram-канал
+![TelegramNotifications](https://user-images.githubusercontent.com/17838471/146496370-c31c57a5-8015-4c24-81fa-4bdef0198d37.png)
 
 
 
