@@ -11,14 +11,20 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static io.qameta.allure.Allure.step;
 
 public class MapTests extends TestBase{
   @Test
-  @Description("Проверка наличия карты")
+  @Description("Проверка отображения карты")
   @DisplayName("Check map")
   @Tag("mobimed")
   void openMapTest() {
-    $$(".MuiTab-wrapper").findBy(text("На карте")).click();
-    $("[aria-label=\"Map\"]").shouldBe(visible, Duration.ofSeconds(10));
+    step("Перейти на вкладку 'На карте'",() -> {
+      $$(".MuiTab-wrapper").findBy(text("На карте")).click();
+    });
+
+    step("Проверить, что карта отображается",() -> {
+      $("[aria-label=\"Map\"]").shouldBe(visible, Duration.ofSeconds(10));
+    });
   }
 }
