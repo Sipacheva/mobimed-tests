@@ -1,19 +1,18 @@
 package ru.mobimed.tests;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.Keys;
-import ru.mobimed.config.App;
-import ru.mobimed.config.Project;
-import ru.mobimed.helpers.AllureAttachments;
-import ru.mobimed.helpers.DriverSettings;
-import ru.mobimed.helpers.DriverUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.openqa.selenium.Keys;
+import ru.mobimed.config.App;
+import ru.mobimed.helpers.AllureAttachments;
+import ru.mobimed.helpers.DriverSettings;
+import ru.mobimed.helpers.DriverUtils;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
