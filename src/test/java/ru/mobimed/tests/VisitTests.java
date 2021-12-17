@@ -29,7 +29,7 @@ public class VisitTests extends TestBase {
     step("Ввести фамилию в поле Специальность или ФИО", () -> {
       $("input[type=text]", 0).click();
       $("input[type=text]", 0).setValue("иванов").pressEnter();
-      $(".MuiCard-root", 0).shouldHave(text("Иванов Петр Сидорович"), Duration.ofSeconds(3));
+      $(".MuiCard-root", 0).shouldHave(text("Иванов Петр Сидорович"), Duration.ofSeconds(10));
     });
 
     step("Выбрать дату приёма", () -> {
@@ -51,7 +51,7 @@ public class VisitTests extends TestBase {
       $$(".MuiTab-wrapper").findBy(text("Cобытия")).click();
       $$(".MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-2")
               .findBy(text("30")).sibling(3).$(byText("Отменить")).click();
-      $(".MuiDialogActions-root.MuiDialogActions-spacing", 1).shouldBe(visible, Duration.ofSeconds(3));
+      $(".MuiDialogActions-root.MuiDialogActions-spacing", 1).shouldBe(visible, Duration.ofSeconds(10));
       $(".MuiDialogActions-root.MuiDialogActions-spacing", 1)
               .$(byText("Да")).click();
       $(byText("Закрыть"), 2).click();
