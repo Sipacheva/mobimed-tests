@@ -80,7 +80,8 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 
 
 ## При прохождении автотеста записывается видео
-![AddDeleteVisitTest](https://user-images.githubusercontent.com/17838471/146495596-d4cf4447-9f8d-48b9-820e-7ad7b72450d5.gif)
+![AddDeleteVisitTest](https://user-images.githubusercontent.com/17838471/146497374-90b40a1b-4b91-405c-83f6-9dc7cca59610.gif)
+
 
 
 ## Уведомления о результатах прогона автотестов приходят в Telegram-канал
